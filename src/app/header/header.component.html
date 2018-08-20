@@ -1,3 +1,19 @@
-<p>
-  header works!
-</p>
+<div fxLayout="row">
+  <mat-nav-list fxFlex fxGrow="1">
+    <mat-list-item>
+      <a routerLink="books">Livres</a>
+      <mat-icon matListIcon aria-hidden="true">import_contacts</mat-icon>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <mat-nav-list fxLayout="row">
+    <mat-list-item>
+      <a routerLink="auth/signup">Créer un compte</a>
+      <mat-icon matListIcon aria-hidden="true">person_add</mat-icon>
+    </mat-list-item>
+    <mat-list-item>
+      <a routerLink="auth/signin">Connexion</a>
+      <mat-icon matListIcon aria-hidden="true">vpn_key</mat-icon>
+    </mat-list-item>
+  </mat-nav-list>
+</div>

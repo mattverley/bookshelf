@@ -5,6 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
+import { MatListModule, MatToolbarModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppComponent } from './app.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
@@ -25,6 +29,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
+  exports: [MatListModule],
   declarations: [
     AppComponent,
     SignupComponent,
@@ -40,6 +45,10 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatListModule,
+    MatToolbarModule,
+    MatIconModule,
+    FlexLayoutModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [AuthService, BooksService, AuthGuardService],
